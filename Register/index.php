@@ -59,6 +59,7 @@
                                 </div>
 
                             </form>
+                            <a class="btn btn-info" href="../index.php">Log in </a>
                         </div>
                     </div>
                 </div>
