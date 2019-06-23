@@ -38,6 +38,7 @@ if($conn){
                 }
                 if($row["user_type_id"]==1){
                     $_SESSION["isAdmin"]= true;
+                    setcookie("isAdmin",true,time()+(86400*30),"/");
                     //echo "its admin";
                     Header("Location: ../Admin");
                 }else{

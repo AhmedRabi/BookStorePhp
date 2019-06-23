@@ -7,13 +7,18 @@
         public $price;
         public $photo;
 
-        function __construct($id,$title,$author,$category,$price,$photo)
+        function __construct($title,$author,$category,$price,$photo)
         {
-            $this->id = $id;
             $this->title = $title;
             $this->author = $author;
             $this->category = $category;
             $this->price = $price;
+            $this->photo = $photo;
+        }
+        function setID ($id){
+            $this->id = $id;
+        }
+        function setPhoto($photo){
             $this->photo = $photo;
         }
     }

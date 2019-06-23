@@ -34,8 +34,8 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <?php if(isset($_SESSION["isAdmin"])){
-                    echo '<li class="nav-item">
+                <?php if(isset($_SESSION["isAdmin"])||isset($_COOKIE["isAdmin"])){
+                    echo '<li class="nav-item active">
                     <a class="nav-link" href="Admin/index.php">Admin</a>
                 </li> ';
                 }?> 
@@ -48,19 +48,23 @@
     </nav>
     <div class="container" style="padding-top:5em">
         <div class="row">
-            <div class="col-md-4 col-sm-6">
+            
                 <?php
                 foreach($books as $book){
-                echo  '<div class="card">
-                    <img src="http://localhost:330/BookstorePhp'.$book->photo.'" class="card-img-top" alt="'.$book->title.'">
-                    <div class="card-body">
-                        <p class="card-text">'.$book->title.'<br/>by : '.$book->author.'</p>
-                        <p class="card-text">'.$book->price.'</p>
-                    </div>
-                </div>';
+                echo  '<div class="col-md-4 col-sm-6 py-2">
+                           <a href="details.php?id='.$book->id.'"> 
+                           <div class="card">
+                                <img src="http://localhost:330/BookstorePhp/Helper'.$book->photo.'" class="card-img-top" alt="'.$book->title.'">
+                                <div class="card-body">
+                                    <p class="card-text">'.$book->title.'<br/>by : '.$book->author.'</p>
+                                    <p class="card-text">Price : '.$book->price.' $</p>
+                                </div>
+                            </div></a>
+                        </div>'
+                        ;
                 }
                 ?>
-            </div>
+            
         </div>
     </div>
     <!-- Optional JavaScript -->

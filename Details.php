@@ -1,5 +1,5 @@
 <?php  
-    require '../../Helper/Helper.php';
+    require 'Helper/Helper.php';
     session_start();
     //check if a user logged in
     if(isset($_SESSION["username"]) || isset($_COOKIE["username"])){
@@ -19,14 +19,14 @@
 <html lang="en">
 
 <head>
-    <title>Delete Book</title>
+    <title><?php $book->title?></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../styles/bootstrap.min.css" >
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" >
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                 </li> ';
                 }?> 
                 <li class="nav-item active">
-                    <a class="nav-link" href="../../Logout.php">Logout</span></a>
+                    <a class="nav-link" href="../Logout.php">Logout</span></a>
                 </li>
             </ul>
            
@@ -73,17 +73,10 @@
                    <dt class="col-md-3">Category<dt>
                     <dd class="col-md-9"><?php echo $book->category;?></dd>
                </dl>
-              <form method="POST" action="delete.php">
-                <input type="hidden" value="<?php echo $book->id?>" name="id" id="name" />
-                <div class="form-group row">
-                    <div class="col-md-5">
-                        <input type="submit" class="btn btn-danger w-25" value="delete"/>
-                    </div>
-                </div>
-              </form>
+             
                 <div class="row py-3">
                     <div class="col-md-2">
-                        <a href="../index.php" class="btn btn-success text-light">Back to List </a>
+                        <a href="index.php" class="btn btn-success text-light">Back to List </a>
                     </div>
                 </div>
             </div>
@@ -92,8 +85,8 @@
 
       <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="../scripts/jquery-3.3.1.slim.min.js"></script>
-        <script src="../scripts/umd/popper.min.js"></script>
-        <script src="../scripts/bootstrap.min.js"></script>
+        <script src="scripts/jquery-3.3.1.slim.min.js"></script>
+        <script src="scripts/umd/popper.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>
