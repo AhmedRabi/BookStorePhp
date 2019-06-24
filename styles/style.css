@@ -9,9 +9,25 @@
   padding-top: 40px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+
 }
+.nav-fixed{
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:65432135432415354949999999979873513;
+}
+.bg-brown{
+  background-color:rgb(70, 39, 3);
+}
+section.HomePage{
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+}
+
 .card {
- 
+  background-color: rgba(0, 0, 0, 0.6);
   min-height: 200px;
   padding: 30px;
   border-radius: 10px;
@@ -28,9 +44,15 @@ input[type="submit"] {
   width: 100%;
 }
 
-a{
-  color:black;
+ a .card{
+  color:white;
+  font-size:20px;
+  font-weight:300;
 }
-a:hover{
+a:hover {
   text-decoration:none;
+  font-weight: bold;
+}
+a:hover .card{
+  font-weight: 700;
 }

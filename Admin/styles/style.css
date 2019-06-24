@@ -1,22 +1,4 @@
-#login,
-#register {
-  height: 100vh;
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-}
 
-.layer {
-  padding-top: 40px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.card {
-  background-color: rgba(0, 0, 0, 0.3);
-  min-height: 200px;
-  padding: 30px;
-  border-radius: 10px;
-  border: 2px solid #ddd;
-}
 .text-white {
   color: #fff;
 }
@@ -24,3 +6,4 @@
 input[type="submit"] {
   width: 100%;
 }
+
